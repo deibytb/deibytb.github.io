@@ -1,9 +1,11 @@
 <html>
     <head>
         <script>
-            window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
+            if (window.webkit) {
+                window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
+            }
 
-            function postMessage() {
+            var postMessage = function() {
                 console.log("CLICKED")
             }
         </script>
@@ -11,6 +13,6 @@
     <body>
         <h1>Hola mundo ios</h1>
 
-        <input id="clickMe" type="button" value="CLICK ME" onclick="postMessage();"></input>
+        <input id="clickMe" type="button" value="CLICK ME" onclick="postMessage();">CLICK ME</input>
     </body>
 </html>
