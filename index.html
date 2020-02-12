@@ -1,12 +1,12 @@
 <html>
     <head>
         <script>
-            if (window.webkit) {
-                window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
-            }
-
             var postMessage = function() {
                 console.log("CLICKED")
+                
+                if (window.webkit) {
+                    window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
+                }
             }
         </script>
     </head>
