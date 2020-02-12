@@ -2,11 +2,15 @@
     <head>
         <script>
             window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
+
+            function postMessage() {
+                console.log("CLICKED")
+            }
         </script>
     </head>
     <body>
         <h1>Hola mundo ios</h1>
 
-        <button onclick="messageHandlers();"></button>
+        <input id="clickMe" type="button" value="CLICK ME" onclick="postMessage();"></input>
     </body>
 </html>
