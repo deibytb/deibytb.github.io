@@ -4,11 +4,11 @@
             if (window.webkit) {
                 window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
                 window.webkit.messageHandlers.clickListener.postMessage("LISTENER");
-                window.webkit.messageHandlers.click.postMessage();
+                window.webkit.messageHandlers.clic.postMessage();
             }
             
             var counter = 0
-            var postMessage = function() {
+            var clickButton = function() {
                 console.log(counter)
                 var button = document.getElementById("clickMe");
                 counter += 1
@@ -17,7 +17,7 @@
                 if (window.webkit) {
                     window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
                     window.webkit.messageHandlers.clickListener.postMessage("LISTENER");
-                    window.webkit.messageHandlers.click.postMessage();
+                    window.webkit.messageHandlers.clic.postMessage();
                 }
             }
         </script>
@@ -25,6 +25,6 @@
     <body>
         <h1>Hola mundo ios</h1>
 
-        <input id="clickMe" type="button" value="CLICK ME" onclick="postMessage();">CLICK ME</input>
+        <input id="clickMe" type="button" value="CLICK ME" onclick="clickButton();">CLICK ME</input>
     </body>
 </html>
