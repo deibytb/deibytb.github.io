@@ -1,11 +1,16 @@
 <html>
     <head>
         <script>
-            if (window.webkit) {
-                window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
-            }
+            window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
+            
+            var counter = 0
             var postMessage = function() {
                 console.log("CLICKED")
+                var button = document.getElementById("clickMe");
+                counter += 1
+                button.value = counter
+
+                window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
             }
         </script>
     </head>
