@@ -3,7 +3,8 @@
         <script>
             if (window.webkit) {
                 window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
-                window.webkit.messageHandlers.clickListener.postMessage("LISTENER");
+                window.webkit.messageHandlers.deiby.postMessage({});
+                // window.webkit.messageHandlers.clickListener.postMessage("LISTENER");
                 // window.webkit.messageHandlers.clic.postMessage();
             }
             
@@ -16,7 +17,8 @@
 
                 if (window.webkit) {
                     window.webkit.messageHandlers.doStuffMessageHandler.postMessage({ param1: "stuff", param2: "1000" });
-                    window.webkit.messageHandlers.clickListener.postMessage("LISTENER");
+                    window.webkit.messageHandlers.deiby.postMessage({});
+                    // window.webkit.messageHandlers.clickListener.postMessage("LISTENER");
                     // window.webkit.messageHandlers.clic.postMessage();
                 }
             }
